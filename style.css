@@ -1,0 +1,212 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  background: #7AD1FF;
+}
+
+/* CARD GIGANTE */
+.card {
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 50px;
+  background: #ffffffd5;
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+
+  min-height: 75vh;      /* O card ocupa 75% da tela */
+  display: flex;
+  align-items: center;
+}
+
+/* Container da imagem + texto */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+/* Imagem maior */
+.container img {
+  width: 380px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* Texto */
+.text {
+  max-width: 800px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.texto h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.friends {
+  color: yellow; /* deixa só Friends amarelo */
+}
+
+.arrow {
+  color: #68A4F1; /* mantém o > na cor padrão da navbar */
+}
+
+.navbar {
+  background-color: black;
+  color: #68A4F1; /* cor padrão do texto */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 55px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.nav-links-desktop {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links-desktop a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links-desktop a:hover {
+  color: #24c31c;
+}
+
+/* Botão hamburger */
+.hamburger,
+.close {
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 60%;
+  height: 100%;
+  background: #222;
+  padding: 20px;
+  transition: 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.nav-links-mobile {
+  list-style: none;
+}
+
+.nav-links-mobile a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Mostrar hamburger só no mobile */
+@media (max-width: 900px) {
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container img {
+    width: 250px;
+  }
+
+  .nav-links-desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
+
+
+.card2 {
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 50px;
+
+  background-image: url("img/tela.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+
+  min-height: 75vh;
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente */
+}
+
+.texto1 {
+  text-align: center;       /* centraliza títulos e botão */
+  display: flex;
+  flex-direction: column;   /* empilha h2 e botão */
+  align-items: center;      /* centraliza horizontalmente */
+  gap: 20px;                /* espaço entre título e botão */
+}
+
+.download-btn {
+  display: flex;            /* flex para centralizar conteúdo dentro do botão */
+  justify-content: center;  /* centraliza horizontal */
+  align-items: center;      /* centraliza vertical */
+  background: linear-gradient(90deg, #ff9100, #ff2d00);
+  color: #fff;
+  padding: 15px 35px;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 15px rgba(255, 90, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+.download-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(255, 60, 0, 0.7);
+  filter: brightness(1.1);
+}
+
+.download-btn:active {
+  transform: scale(0.98);
+}
